@@ -1,14 +1,14 @@
 const MyNameApp = {
 	data() {
 	  return {
-		name: "Jesiel",
+		name: "",
 		input_name: ''
 	  }
 	},
 	methods: {
 		submitForm(e){
 			e.preventDefault()
-			alert(this.input_name)
+			// alert(this.input_name)
 			this.name = this.input_name
 		}
   }

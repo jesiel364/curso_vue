@@ -8,6 +8,7 @@ body{
   
   font-size: 15pt;
   font-family: "Roboto Condensed", sans-serif;
+  color: antiquewhite;
   background-color: antiquewhite;
 
   background:
@@ -54,4 +55,9 @@ body{
     height: 35px;
     background-color: #282828;
     color: white;
+    font-size: 18px;
+}
+
+#res{
+    text-align: center;
 }
