@@ -5,14 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hello VUE</title>
 	<script src="https://unpkg.com/vue@next" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
 	<script src="src/app.js" defer></script>
+    <link rel="stylesheet" href='style.css'>
 </head>
 <body>
 	<div id="app">
 		<form id="app-form">
 			<input type="text" v-model="input_name" placeholder="Digite seu nome: ">
-			<input type="submit" value="Enviar" v-on:click='submitForm'>
+			<input id="btn" type="submit" value="Enviar" v-on:click='submitForm'>
 		</form>
 		<p>Meu nome é: {{ name }}</p>
 	</div>

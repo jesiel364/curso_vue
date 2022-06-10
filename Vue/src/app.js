@@ -8,8 +8,10 @@ const MyNameApp = {
 	methods: {
 		submitForm(e){
 			e.preventDefault()
-			console.log('Caiu aqui!')
+			alert(this.input_name)
+			this.name = this.input_name
 		}
   }
+}
   
   Vue.createApp(MyNameApp).mount('#app')
