@@ -18,7 +18,7 @@
 <body>
 	<div id="app">
 		<form id="app-form">
-			<input type="text" v-model="input_name" placeholder="Digite seu nome: ">
+			<input id="txt" type="text" v-model="input_name" placeholder="Digite seu nome: ">
 			<input id="btn" type="submit" value="Enviar" v-on:click='submitForm'>
 		</form>
 		<p>Meu nome é: {{ name }}</p>
