@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<div id="app">
+	<div class="book">
+		<h1>{{ product.title }}</h1>
+		<img height="100" :src="product.image" :alt='product.description'>
+		<p>{{ product.description }}</p>
+		<strong v-if="product.stars > 0">{{ product1.stars }}</strong>
+	</div>
+
+	<div class="book">
+		<h1>{{ product2.title }}</h1>
+		<img height="100" :src="product2.image" :alt='product2.description'>
+		<p>{{ product2.description }}</p>
+		<strong v-if="product2.stars > 0">{{ product2.stars }}</strong>
+	</div>
+	
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>

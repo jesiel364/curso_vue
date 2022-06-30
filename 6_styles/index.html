@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loja de Livros</title>
+	<link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+<body>
+
+<div id="app">
+	<div :style="styles">
+		<label for="tema">Tema Escuro</label>
+		<input type="checkbox" :checked= 'themeBlack' @click="toogleTheme" name="tema">
+
+		<h1>{{ fullName }}</h1>
+
+		<h3>Carrinho ({{cart.length}})</h3>
+		<hr>
+			<ul>
+				<li v-for='(product, index) in products' class="book" :key='index'>
+					<p>{{ product.title }}</p>
+					<img height="100" :src="product.image" :alt='product.description'>
+					<!-- <p>{{ product.description }}</p> -->
+					<!-- <strong v-if="product.stars > 0">{{ product.stars }}</strong> -->
+					<!-- <a 
+						href="#" 
+						@click.prevent="removeCart(product)"
+						v-if='inCart(product)'	
+							>REMOVE CART</a> -->
+
+					<button 
+
+						:disabled="inCart(product)"
+						v-on:click.prevent="addCart(product)"	
+							>ADD CART</button>
+					
+				</li>
+			</ul>
+		</div>
+</div>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>
